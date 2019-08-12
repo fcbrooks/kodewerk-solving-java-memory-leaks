@@ -1,3 +1,4 @@
+@echo off
 REM ##################################################
 
 REM File is set into 4 sections
@@ -60,8 +61,8 @@ REM JITWatch Configurations
 
 SET JITWATCH=-XX:+UnlockDiagnosticVMOptions -XX:+LogCompilation -XX:+TraceClassLoading -XX:+PrintAssembly
 
-##################################################
-# JFR Configurations
+REM ##################################################
+REM # JFR Configurations
 REM SET UNLOCK_JFR=-XX:+UnlockCommercialFeatures -XX:+FlightRecorder
 REM SET START_JFR=-XX:StartFlightRecording=duration=60s,filename=exercise1.jfr
 

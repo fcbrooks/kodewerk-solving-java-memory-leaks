@@ -1,3 +1,4 @@
+@echo off
 REM ******************************************
 REM Set JAVA_HOME to the location of your JDK
 REM DOS batches need to have spaces escaped

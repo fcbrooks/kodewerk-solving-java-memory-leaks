@@ -1,4 +1,4 @@
-
+@echo off
 call ..\setEnv.bat
 if "%JAVA%" == "" goto usage
 
@@ -6,6 +6,8 @@ if "%JAVA%" == "" goto usage
 set DOMAIN=src/com/kodewerk/stock/*.java src/com/kodewerk/web/*.java src/com/kodewerk/db/*.java
 set SOURCES=%DOMAIN%
 set EXPLODED=www/lab
+
+IF NOT EXIST "%EXPLODED%\WEB-INF\classes" mkdir ""%EXPLODED%\WEB-INF\classes"
 
 set CP=-classpath %JETTY_JARS%;lib\hsqldb.jar
 

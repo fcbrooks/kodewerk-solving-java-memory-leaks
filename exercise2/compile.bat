@@ -1,4 +1,4 @@
-
+@echo off
 call ..\setEnv.bat
 if "%JAVA%" == "" goto usage
 
@@ -9,6 +9,8 @@ set QUERY=src\com\kodewerk\tipsdb\query\*.java
 set SERVLET=src\com\kodewerk\tipsdb\servlet\*.java
 set SOURCES=%UTIL% %TIPSDB% %DOMAIN% %QUERY% %SERVLET%
 set EXPLODED=www\tips
+
+IF NOT EXIST "%EXPLODED%\WEB-INF\classes" mkdir ""%EXPLODED%\WEB-INF\classes"
 
 set CP=-classpath %JETTY_JARS%;lib\hsqldb.jar
 
